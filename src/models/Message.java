@@ -8,8 +8,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-
 
 /*アノテーション@とはJavaプ
  * ログラムのソースコード内に連携情報を記述するやり方がアノテーションである。
@@ -22,6 +23,12 @@ import javax.persistence.Table;
  */
 
 @Entity//データの入れ物となるクラス
+@NamedQueries({
+    @NamedQuery(
+            name = "getAllMessages",
+            query = "SELECT m FROM Message AS m ORDER BY m.id DESC"
+            )
+})
 @Table(name = "message")
 
 
@@ -86,4 +93,4 @@ public class Message {
     }
 
 
-}
+
