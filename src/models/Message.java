@@ -1,7 +1,9 @@
 package models;
 
 
-import java.sql.Timestamp;//APIのtimestamp”はデータベースにアクセスして日時を取得する処理が可能になる
+import java.sql.Timestamp;
+
+//APIのtimestamp”はデータベースにアクセスして日時を取得する処理が可能になる
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -30,7 +32,7 @@ import javax.persistence.Table;
             query = "SELECT m FROM Message AS m ORDER BY m.id DESC"
             )
 })
-@Table(name = "message")
+@Table(name = "messages")
 
 
 public class Message {
