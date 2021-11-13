@@ -12,6 +12,7 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
+
 /*アノテーション@とはJavaプ
  * ログラムのソースコード内に連携情報を記述するやり方がアノテーションである。
  */
